@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iris Thai Spa — тайский спа в Астане</title>
+<meta name="description" content="Iris Thai Spa в Астане: хаммам, спа для двоих, обертывания. Рейтинг 4.9 в 2ГИС. Скидка 10% на первое посещение и в день рождения.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --jade-900:#07221d;
+  --jade-800:#0c3329;
+  --jade-600:#14594a;
+  --gold:#d9a84a;
+  --gold-soft:#f1d28f;
+  --orchid:#c2306e;
+  --orchid-soft:#f08bb3;
+  --saffron:#f2a33a;
+  --ivory:#fbf4e6;
+  --ink:#10201c;
+  --display:"Philosopher","Georgia",serif;
+  --body:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--jade-900);color:var(--ivory);line-height:1.6;font-size:17px;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold-soft);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.08}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:16px 30px;border-radius:999px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer}
+.btn-gold{background:linear-gradient(135deg,var(--gold-soft),var(--gold) 55%,#b9822a);color:#2a1a02;box-shadow:0 10px 30px rgba(217,168,74,.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(217,168,74,.5)}
+.btn-line{border:2px solid var(--gold);color:var(--gold-soft)}
+.btn-line:hover{background:rgba(217,168,74,.14)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:grid;align-items:center;overflow:hidden;isolation:isolate;
+  background:
+   radial-gradient(900px 600px at 72% 38%,rgba(242,163,58,.38),transparent 60%),
+   linear-gradient(180deg,#0a2b25 0%,#0f4036 55%,#0a2a23 100%)}
+.hero svg.scene{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(5,26,22,.7) 0%,rgba(5,26,22,.35) 38%,rgba(5,26,22,0) 58%)}
+.hero .wrap{padding:110px 0 150px;position:relative;z-index:2}
+.hero h1,.hero p.lead{text-shadow:0 2px 24px rgba(5,26,22,.7)}
+.frame.light figcaption{color:#7d1646;text-shadow:none}
+@media(max-width:620px){.hero::before{background:linear-gradient(180deg,rgba(5,26,22,.7),rgba(5,26,22,.45) 50%,rgba(5,26,22,0) 72%)}}
+.brand-tag{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border:1px solid rgba(241,210,143,.5);border-radius:999px;background:rgba(7,34,29,.55);backdrop-filter:blur(6px);font-size:.92rem;color:var(--gold-soft)}
+.brand-tag b{color:var(--saffron)}
+.hero h1{font-size:clamp(3.2rem,8.4vw,7rem);margin:26px 0 18px;letter-spacing:-.01em;
+  background:linear-gradient(180deg,#fff3d0 0%,var(--gold) 70%,#9b6a1e 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 30px rgba(0,0,0,.35))}
+.hero h1 span{display:block;font-size:.36em;font-style:italic;font-weight:400;color:var(--ivory);background:none;-webkit-text-fill-color:var(--ivory);letter-spacing:.02em;margin-top:.15em}
+.hero p.lead{max-width:34ch;font-size:clamp(1.15rem,2.4vw,1.5rem);color:#f4e8cf;margin-bottom:34px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px}
+.petal{position:absolute;top:-40px;width:18px;height:26px;border-radius:70% 0 70% 0;background:linear-gradient(135deg,var(--orchid-soft),var(--orchid));opacity:.85;z-index:1;animation:fall linear infinite;pointer-events:none}
+@keyframes fall{
+  0%{transform:translate3d(0,-5vh,0) rotate(0)}
+  50%{transform:translate3d(60px,55vh,0) rotate(200deg)}
+  100%{transform:translate3d(-30px,108vh,0) rotate(420deg)}
+}
+
+/* ---------- facts strip ---------- */
+.facts{background:linear-gradient(90deg,#8a5a14,var(--gold) 20%,var(--gold-soft) 50%,var(--gold) 80%,#8a5a14);color:#2a1a02;position:relative;z-index:2}
+.facts ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.facts li{padding:22px 16px;text-align:center;border-right:1px solid rgba(42,26,2,.25)}
+.facts li:last-child{border:0}
+.facts strong{display:block;font-family:var(--display);font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.1}
+.facts span{font-size:.92rem;font-weight:500}
+
+/* ---------- section basics ---------- */
+section{position:relative}
+.pad{padding:clamp(70px,10vw,130px) 0}
+.sec-head{max-width:640px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(2.2rem,5.4vw,3.8rem);color:var(--gold-soft)}
+.sec-head p{margin-top:16px;color:#d8e6df;font-size:1.1rem}
+.center{text-align:center;margin-inline:auto}
+
+/* ---------- services ---------- */
+.services{background:linear-gradient(180deg,var(--jade-900),var(--jade-800))}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.arch{border-radius:999px 999px 26px 26px;overflow:hidden;background:var(--jade-600);border:2px solid rgba(241,210,143,.55);display:flex;flex-direction:column;transition:transform .3s}
+.arch:hover{transform:translateY(-8px)}
+.arch svg{display:block;width:100%;height:auto;aspect-ratio:4/4.4}
+.arch .txt{padding:20px 22px 28px;background:linear-gradient(180deg,rgba(7,34,29,.2),rgba(7,34,29,.75));flex:1}
+.arch h3{font-size:1.55rem;color:var(--gold-soft);margin-bottom:8px}
+.arch p{font-size:.98rem;color:#e3efe9}
+
+/* ---------- gallery of paintings ---------- */
+.gallery{background:var(--ivory);color:var(--ink)}
+.gallery .sec-head h2{color:var(--jade-800)}
+.gallery .sec-head p{color:#40554e}
+.frames{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:18px}
+.frame{border-radius:20px;overflow:hidden;position:relative;box-shadow:0 18px 40px rgba(16,32,28,.28);border:6px solid #fff}
+.frame svg{width:100%;height:100%;display:block}
+.frame.big{grid-row:span 2}
+.frame figcaption{position:absolute;left:14px;bottom:12px;color:#fff;font-family:var(--display);font-style:italic;font-size:1.1rem;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+
+/* ---------- offer ---------- */
+.offer{background:linear-gradient(135deg,#7d1646,var(--orchid) 45%,#e0507f);overflow:hidden}
+.offer .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,6vw,70px);align-items:center}
+.coin{width:clamp(170px,26vw,290px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;
+  background:radial-gradient(circle at 30% 25%,var(--gold-soft),var(--gold) 60%,#a8741f);color:#2a1a02;font-family:var(--display);box-shadow:0 0 0 10px rgba(241,210,143,.28),0 0 0 22px rgba(241,210,143,.12),0 24px 60px rgba(0,0,0,.35);transform:rotate(-8deg)}
+.coin b{font-size:clamp(3.4rem,8vw,6rem);line-height:.9;display:block}
+.coin small{font-family:var(--body);font-weight:700;font-size:.9rem}
+.offer h2{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:14px}
+.offer p{font-size:1.15rem;max-width:44ch;margin-bottom:26px;color:#ffe9f1}
+.offer .note{font-size:.9rem;margin:18px 0 0;opacity:.85}
+
+/* ---------- visit steps ---------- */
+.visit{background:var(--jade-800)}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:s;position:relative}
+.steps li{counter-increment:s;position:relative;padding-top:78px}
+.steps li::before{content:counter(s);position:absolute;top:0;left:0;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-size:1.7rem;font-weight:700;color:#2a1a02;background:linear-gradient(135deg,var(--gold-soft),var(--gold))}
+.steps li::after{content:"";position:absolute;top:28px;left:68px;right:-14px;border-top:2px dashed rgba(241,210,143,.5)}
+.steps li:last-child::after{display:none}
+.steps h3{font-size:1.35rem;color:var(--gold-soft);margin-bottom:6px}
+.steps p{font-size:.98rem;color:#d8e6df}
+
+/* ---------- contacts ---------- */
+.contacts{background:linear-gradient(180deg,var(--jade-800),#051a16)}
+.cbox{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:stretch}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(241,210,143,.35);border-radius:28px;padding:clamp(24px,4vw,44px)}
+.card h2{font-size:clamp(2rem,4.6vw,3.2rem);color:var(--gold-soft);margin-bottom:22px}
+.row{display:flex;gap:16px;padding:14px 0;border-top:1px solid rgba(241,210,143,.2)}
+.row:first-of-type{border-top:0}
+.row dt{min-width:96px;color:var(--gold);font-weight:700}
+.row dd a{text-decoration:underline;text-underline-offset:4px}
+.card .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.mapart{border-radius:28px;overflow:hidden;border:1px solid rgba(241,210,143,.35);min-height:340px}
+.mapart svg{width:100%;height:100%;display:block}
+
+footer{background:#051a16;color:#9db8ae;text-align:center;padding:28px 20px 110px;font-size:.88rem}
+
+/* ---------- sticky mobile bar ---------- */
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:none}
+.sticky .btn{width:100%;justify-content:center;box-shadow:0 12px 34px rgba(0,0,0,.5)}
+
+@media(max-width:960px){
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .frames{grid-template-columns:1fr 1fr;grid-template-rows:240px 240px 240px}
+  .frame.big{grid-row:span 1;grid-column:span 2}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .steps li::after{display:none}
+  .cbox{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  body{font-size:16px}
+  .facts ul{grid-template-columns:repeat(2,1fr)}
+  .facts li:nth-child(2){border-right:0}
+  .facts li:nth-child(-n+2){border-bottom:1px solid rgba(42,26,2,.25)}
+  .grid4{grid-template-columns:1fr}
+  .arch{border-radius:200px 200px 26px 26px}
+  .offer .wrap{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .steps{grid-template-columns:1fr}
+  .row{flex-direction:column;gap:2px}
+  .sticky{display:block}
+  .hero .wrap{padding:90px 0 130px}
+}
+@media(prefers-reduced-motion:reduce){
+  .petal{display:none}
+  html{scroll-behavior:auto}
+  .arch,.btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- shared art definitions -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="petalG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff0f6"/>
+      <stop offset=".55" stop-color="#f08bb3"/>
+      <stop offset="1" stop-color="#c2306e"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f1d28f"/>
+      <stop offset="1" stop-color="#b9822a"/>
+    </linearGradient>
+    <symbol id="lotus" viewBox="0 0 200 120">
+      <g fill="url(#petalG)" stroke="#fff4f8" stroke-width="1.5" stroke-opacity=".7">
+        <g transform="rotate(-62 100 112)"><path d="M100 22C122 50 122 88 100 112C78 88 78 50 100 22Z"/></g>
+        <g transform="rotate(62 100 112)"><path d="M100 22C122 50 122 88 100 112C78 88 78 50 100 22Z"/></g>
+        <g transform="rotate(-34 100 112)"><path d="M100 14C124 46 124 88 100 112C76 88 76 46 100 14Z"/></g>
+        <g transform="rotate(34 100 112)"><path d="M100 14C124 46 124 88 100 112C76 88 76 46 100 14Z"/></g>
+        <path d="M100 4C126 40 126 88 100 112C74 88 74 40 100 4Z"/>
+      </g>
+      <ellipse cx="100" cy="112" rx="10" ry="4" fill="#f2a33a"/>
+    </symbol>
+    <symbol id="prang" viewBox="0 0 76 200">
+      <path d="M0 200V122H10V102H20V82H28V62H34L36 30L38 6L40 30L42 62H48V82H56V102H66V122H76V200Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="hero" id="top">
+  <svg class="scene" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="sunG" cx=".5" cy=".5" r=".5">
+        <stop offset="0" stop-color="#fff2c9"/>
+        <stop offset=".6" stop-color="#f6bf5a"/>
+        <stop offset="1" stop-color="#f2a33a"/>
+      </radialGradient>
+      <linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#0f4a3d"/>
+        <stop offset="1" stop-color="#051a16"/>
+      </linearGradient>
+    </defs>
+    <circle cx="1030" cy="330" r="250" fill="#f2a33a" opacity=".16"/>
+    <circle cx="1030" cy="330" r="190" fill="url(#sunG)"/>
+    <!-- far spires -->
+    <g fill="#0b3a2f" opacity=".95">
+      <use href="#prang" x="640" y="300" width="120" height="316"/>
+      <use href="#prang" x="1180" y="330" width="95" height="250"/>
+    </g>
+    <!-- main temple -->
+    <g fill="#06241d">
+      <use href="#prang" x="860" y="170" width="200" height="526"/>
+      <use href="#prang" x="760" y="330" width="120" height="316"/>
+      <use href="#prang" x="1040" y="330" width="120" height="316"/>
+      <rect x="700" y="640" width="520" height="40"/>
+    </g>
+    <g fill="url(#goldG)">
+      <rect x="958" y="170" width="4" height="40"/>
+      <circle cx="960" cy="168" r="7"/>
+    </g>
+    <!-- water -->
+    <rect x="0" y="650" width="1440" height="250" fill="url(#waterG)"/>
+    <g stroke="#f1d28f" stroke-opacity=".35" fill="none" stroke-width="2">
+      <path d="M840 700q120 14 240 0"/><path d="M900 720q60 10 120 0"/>
+      <path d="M740 745q220 22 440 0" stroke-opacity=".2"/>
+    </g>
+    <!-- reflection of sun -->
+    <ellipse cx="1030" cy="740" rx="150" ry="14" fill="#f2a33a" opacity=".35"/>
+    <!-- lotus pond -->
+    <g>
+      <use href="#lotus" x="120" y="740" width="260" height="156"/>
+      <use href="#lotus" x="470" y="790" width="190" height="114"/>
+      <use href="#lotus" x="1150" y="770" width="240" height="144"/>
+      <use href="#lotus" x="760" y="810" width="150" height="90"/>
+    </g>
+    <g fill="#12614e">
+      <ellipse cx="420" cy="850" rx="70" ry="14"/><ellipse cx="1060" cy="860" rx="90" ry="16"/><ellipse cx="640" cy="880" rx="60" ry="12"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <span class="brand-tag"><b>★ 4.9</b> в 2ГИС · Астана, Есиль район</span>
+    <h1>Iris Thai Spa<span>тайский спа, где время идёт медленнее</span></h1>
+    <p class="lead">Хаммам, спа для двоих и обертывания. Откройте для себя вечер, о котором захочется рассказать.</p>
+    <div class="cta">
+      <a class="btn btn-gold" href="https://wa.me/77084900144?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20Iris%20Thai%20Spa" target="_blank" rel="noopener">Записаться в WhatsApp</a>
+      <a class="btn btn-line" href="#services">Что мы предлагаем</a>
+    </div>
+  </div>
+</header>
+
+<aside class="facts" aria-label="Коротко о спа">
+  <div class="wrap">
+    <ul>
+      <li><strong>4.9</strong><span>рейтинг в 2ГИС</span></li>
+      <li><strong>395</strong><span>отзывов гостей</span></li>
+      <li><strong>11:00–23:00</strong><span>ежедневно</span></li>
+      <li><strong>−10%</strong><span>на первое посещение</span></li>
+    </ul>
+  </div>
+</aside>
+
+<section class="services pad" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Четыре способа отдохнуть по-тайски</h2>
+      <p>Выберите программу для себя или для двоих. Администратор подскажет, что подойдёт именно вам.</p>
+    </div>
+    <div class="grid4">
+
+      <article class="arch">
+        <svg viewBox="0 0 400 440" role="img" aria-label="Иллюстрация: хаммам, пар и купол">
+          <defs><linearGradient id="a1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9b86a"/><stop offset="1" stop-color="#9b3a52"/></linearGradient></defs>
+          <rect width="400" height="440" fill="url(#a1)"/>
+          <g fill="#fff3d6" opacity=".95"><path d="M60 440V250Q60 130 200 100Q340 130 340 250V440Z" fill="#4a1f3a"/></g>
+          <path d="M90 440V260Q90 160 200 134Q310 160 310 260V440Z" fill="#7a2f55"/>
+          <g stroke="#f1d28f" stroke-width="3" fill="none" stroke-opacity=".7">
+            <path d="M110 300h180M110 340h180M110 380h180M150 260v180M200 250v190M250 260v180"/>
+          </g>
+          <circle cx="200" cy="70" r="22" fill="#f1d28f"/><rect x="198" y="40" width="4" height="30" fill="#f1d28f"/>
+          <g fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".75">
+            <path d="M140 230c-24-26 24-44 0-70"/><path d="M200 220c-24-26 24-44 0-70"/><path d="M260 230c-24-26 24-44 0-70"/>
+          </g>
+        </svg>
+        <div class="txt"><h3>Хаммам</h3><p>Тёплый пар и мягкий камень. Температуру подбирают под ваше самочувствие.</p></div>
+      </article>
+
+      <article class="arch">
+        <svg viewBox="0 0 400 440" role="img" aria-label="Иллюстрация: два лотоса и свечи, спа для двоих">
+          <defs><linearGradient id="a2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c0f3d"/><stop offset="1" stop-color="#c2306e"/></linearGradient></defs>
+          <rect width="400" height="440" fill="url(#a2)"/>
+          <g fill="#fff" opacity=".85"><circle cx="60" cy="60" r="2"/><circle cx="130" cy="110" r="1.6"/><circle cx="310" cy="70" r="2"/><circle cx="350" cy="140" r="1.6"/><circle cx="240" cy="40" r="1.8"/></g>
+          <circle cx="200" cy="150" r="64" fill="#f6dba0"/>
+          <rect y="300" width="400" height="140" fill="#2a0f3a" opacity=".85"/>
+          <use href="#lotus" x="30" y="250" width="190" height="114"/>
+          <use href="#lotus" x="180" y="250" width="190" height="114"/>
+          <g>
+            <rect x="92" y="348" width="26" height="46" rx="4" fill="#fff3d6"/><path d="M105 316c14 14 8 26 0 32c-8-6-14-18 0-32Z" fill="#f2a33a"/>
+            <rect x="282" y="348" width="26" height="46" rx="4" fill="#fff3d6"/><path d="M295 316c14 14 8 26 0 32c-8-6-14-18 0-32Z" fill="#f2a33a"/>
+          </g>
+        </svg>
+        <div class="txt"><h3>Спа для двоих</h3><p>Отдельная программа для пары: свидание, юбилей или просто повод побыть вдвоём.</p></div>
+      </article>
+
+      <article class="arch">
+        <svg viewBox="0 0 400 440" role="img" aria-label="Иллюстрация: листья и тёплые волны, обертывание">
+          <defs><linearGradient id="a3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f8a63"/><stop offset="1" stop-color="#0c3329"/></linearGradient></defs>
+          <rect width="400" height="440" fill="url(#a3)"/>
+          <g fill="#58c08a" opacity=".9">
+            <path d="M200 400C90 330 70 190 200 60C330 190 310 330 200 400Z"/>
+          </g>
+          <path d="M200 400V90" stroke="#0c3329" stroke-width="5"/>
+          <g stroke="#0c3329" stroke-width="3.5" fill="none" stroke-linecap="round">
+            <path d="M200 150l-50-30M200 200l-70-40M200 250l-80-40M200 300l-70-30M200 150l50-30M200 200l70-40M200 250l80-40M200 300l70-30"/>
+          </g>
+          <path d="M0 360Q100 320 200 360T400 360V440H0Z" fill="#f1d28f" opacity=".9"/>
+          <path d="M0 395Q100 355 200 395T400 395V440H0Z" fill="#d9a84a"/>
+          <circle cx="70" cy="90" r="26" fill="#f6dba0" opacity=".8"/>
+        </svg>
+        <div class="txt"><h3>Обертывание</h3><p>Тёплые составы с травами и маслами. Кожа становится мягкой, мысли тише.</p></div>
+      </article>
+
+      <article class="arch">
+        <svg viewBox="0 0 400 440" role="img" aria-label="Иллюстрация: стопка камней и цветок франжипани, тайский массаж">
+          <defs><linearGradient id="a4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6c36a"/><stop offset="1" stop-color="#e0507f"/></linearGradient></defs>
+          <rect width="400" height="440" fill="url(#a4)"/>
+          <circle cx="300" cy="110" r="52" fill="#fff3d6" opacity=".9"/>
+          <rect y="360" width="400" height="80" fill="#0c3329"/>
+          <ellipse cx="200" cy="360" rx="120" ry="14" fill="#06241d"/>
+          <ellipse cx="200" cy="336" rx="100" ry="34" fill="#3b3b4a"/>
+          <ellipse cx="200" cy="286" rx="74" ry="28" fill="#55566a"/>
+          <ellipse cx="200" cy="244" rx="50" ry="22" fill="#6e6f86"/>
+          <ellipse cx="200" cy="210" rx="30" ry="16" fill="#8a8ba2"/>
+          <g transform="translate(200 160)">
+            <g fill="#fffaf0" stroke="#f2c36a" stroke-width="2">
+              <ellipse rx="22" ry="44" transform="rotate(0) translate(0 -30)"/>
+              <ellipse rx="22" ry="44" transform="rotate(72) translate(0 -30)"/>
+              <ellipse rx="22" ry="44" transform="rotate(144) translate(0 -30)"/>
+              <ellipse rx="22" ry="44" transform="rotate(216) translate(0 -30)"/>
+              <ellipse rx="22" ry="44" transform="rotate(288) translate(0 -30)"/>
+            </g>
+            <circle r="14" fill="#f2a33a"/>
+          </g>
+        </svg>
+        <div class="txt"><h3>Тайский массаж</h3><p>Глубокое расслабление после рабочей недели. Уточните у администратора доступные программы.</p></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="gallery pad" id="mood">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Атмосфера, в которую хочется вернуться</h2>
+      <p>Лотосы, тёплый свет и тишина. Настроение спа в нескольких картинах.</p>
+    </div>
+    <div class="frames">
+
+      <figure class="frame big">
+        <svg viewBox="0 0 600 560" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Картина: ночной пруд с лотосами под луной">
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#150b3a"/><stop offset=".6" stop-color="#6a2c7a"/><stop offset="1" stop-color="#e0507f"/></linearGradient></defs>
+          <rect width="600" height="560" fill="url(#g1)"/>
+          <g fill="#fff" opacity=".9"><circle cx="70" cy="60" r="2"/><circle cx="160" cy="120" r="1.5"/><circle cx="500" cy="80" r="2"/><circle cx="420" cy="150" r="1.5"/><circle cx="300" cy="50" r="2"/><circle cx="560" cy="200" r="1.6"/></g>
+          <circle cx="380" cy="170" r="84" fill="#fff0c9"/><circle cx="355" cy="150" r="84" fill="#6a2c7a" opacity=".0"/>
+          <rect y="330" width="600" height="230" fill="#0f1b3a" opacity=".92"/>
+          <path d="M0 360H600" stroke="#f1d28f" stroke-opacity=".35"/>
+          <ellipse cx="380" cy="380" rx="120" ry="10" fill="#fff0c9" opacity=".35"/>
+          <use href="#lotus" x="40" y="360" width="260" height="156"/>
+          <use href="#lotus" x="330" y="420" width="200" height="120"/>
+        </svg>
+        <figcaption>Ночной пруд</figcaption>
+      </figure>
+
+      <figure class="frame">
+        <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Картина: храм на закате">
+          <defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2a33a"/><stop offset="1" stop-color="#c2306e"/></linearGradient></defs>
+          <rect width="400" height="260" fill="url(#g2)"/>
+          <circle cx="200" cy="160" r="70" fill="#fff0c9" opacity=".9"/>
+          <g fill="#3a0f2e"><use href="#prang" x="150" y="40" width="100" height="263"/><use href="#prang" x="60" y="110" width="70" height="184"/><use href="#prang" x="270" y="110" width="70" height="184"/></g>
+        </svg>
+        <figcaption>Закат над храмом</figcaption>
+      </figure>
+
+      <figure class="frame">
+        <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Картина: свечи и горячие камни">
+          <rect width="400" height="260" fill="#0c3329"/>
+          <circle cx="200" cy="120" r="120" fill="#f2a33a" opacity=".18"/>
+          <ellipse cx="200" cy="228" rx="170" ry="20" fill="#06241d"/>
+          <ellipse cx="130" cy="206" rx="60" ry="22" fill="#3b3b4a"/><ellipse cx="130" cy="176" rx="42" ry="17" fill="#55566a"/>
+          <g><rect x="230" y="150" width="30" height="62" rx="4" fill="#fff3d6"/><path d="M245 108c18 18 10 34 0 42c-10-8-18-24 0-42Z" fill="#f2a33a"/>
+             <rect x="290" y="170" width="26" height="44" rx="4" fill="#fff3d6"/><path d="M303 134c14 14 8 26 0 32c-8-6-14-18 0-32Z" fill="#f2a33a"/></g>
+        </svg>
+        <figcaption>Свет свечей</figcaption>
+      </figure>
+
+      <figure class="frame light">
+        <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Картина: орхидея">
+          <rect width="400" height="260" fill="#fbe3ee"/>
+          <path d="M60 260C120 200 160 140 230 60" stroke="#2f8a63" stroke-width="6" fill="none"/>
+          <g fill="#c2306e"><ellipse cx="240" cy="70" rx="42" ry="26" transform="rotate(-20 240 70)"/><ellipse cx="220" cy="60" rx="34" ry="22" transform="rotate(60 220 60)" fill="#e0507f"/><ellipse cx="262" cy="52" rx="34" ry="22" transform="rotate(-80 262 52)" fill="#e0507f"/></g>
+          <circle cx="240" cy="64" r="11" fill="#f6c36a"/>
+          <g fill="#c2306e" opacity=".9"><ellipse cx="160" cy="140" rx="32" ry="20" transform="rotate(-30 160 140)"/><ellipse cx="146" cy="130" rx="26" ry="16" transform="rotate(50 146 130)" fill="#e0507f"/><ellipse cx="176" cy="128" rx="26" ry="16" transform="rotate(-70 176 128)" fill="#e0507f"/></g>
+          <circle cx="160" cy="136" r="8" fill="#f6c36a"/>
+        </svg>
+        <figcaption>Орхидея</figcaption>
+      </figure>
+
+      <figure class="frame">
+        <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Картина: золотые волны">
+          <defs><linearGradient id="g5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14594a"/><stop offset="1" stop-color="#07221d"/></linearGradient></defs>
+          <rect width="400" height="260" fill="url(#g5)"/>
+          <g fill="none" stroke="#d9a84a" stroke-width="3">
+            <path d="M0 60q50-40 100 0t100 0t100 0t100 0"/><path d="M0 100q50-40 100 0t100 0t100 0t100 0" stroke-opacity=".8"/>
+            <path d="M0 140q50-40 100 0t100 0t100 0t100 0" stroke-opacity=".6"/><path d="M0 180q50-40 100 0t100 0t100 0t100 0" stroke-opacity=".45"/>
+            <path d="M0 220q50-40 100 0t100 0t100 0t100 0" stroke-opacity=".3"/>
+          </g>
+        </svg>
+        <figcaption>Золотые волны</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<section class="offer pad" id="offer">
+  <div class="wrap">
+    <div class="coin" aria-hidden="true"><div><b>−10%</b><small>скидка</small></div></div>
+    <div>
+      <h2>Первый визит и день рождения: скидка 10%</h2>
+      <p>Приходите впервые или отмечайте день рождения с нами. Напишите в WhatsApp и назовите акцию при записи.</p>
+      <a class="btn btn-gold" href="https://wa.me/77084900144?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BF%D0%BE%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%20-10%25" target="_blank" rel="noopener">Записаться по акции</a>
+      <p class="note">Акция действует до 31.12.2026. Условия уточняйте у администратора.</p>
+    </div>
+  </div>
+</section>
+
+<section class="visit pad" id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Как проходит визит</h2>
+      <p>Всё просто: вы пишете нам, остальное мы берём на себя.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Напишите нам</h3><p>В WhatsApp: выберите программу, дату и время.</p></li>
+      <li><h3>Приходите</h3><p>Керей, Жанибек хандар, 18. Работаем ежедневно до 23:00.</p></li>
+      <li><h3>Отдыхайте</h3><p>Хаммам, обертывание или программа для двоих.</p></li>
+      <li><h3>Возвращайтесь</h3><p>Обновите силы и приходите снова.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="contacts pad" id="contacts">
+  <div class="wrap cbox">
+    <div class="card">
+      <h2>Ждём вас в Астане</h2>
+      <dl>
+        <div class="row"><dt>Адрес</dt><dd>ул. Керей, Жанибек хандар, 18<br>Есиль район, Астана</dd></div>
+        <div class="row"><dt>Часы</dt><dd>Ежедневно с 11:00 до 23:00</dd></div>
+        <div class="row"><dt>WhatsApp</dt><dd><a href="https://wa.me/77084900144" target="_blank" rel="noopener">+7 708 490 01 44</a></dd></div>
+        <div class="row"><dt>Instagram</dt><dd><a href="https://instagram.com/iris_thai_spa_astana" target="_blank" rel="noopener">@iris_thai_spa_astana</a></dd></div>
+        <div class="row"><dt>2ГИС</dt><dd><a href="https://2gis.kz/astana/firm/70000001093407644" target="_blank" rel="noopener">Отзывы, фото и маршрут</a></dd></div>
+      </dl>
+      <div class="cta">
+        <a class="btn btn-gold" href="https://wa.me/77084900144?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20Iris%20Thai%20Spa" target="_blank" rel="noopener">Записаться</a>
+        <a class="btn btn-line" href="https://2gis.kz/astana/directions/points/%7C71.425365%2C51.113838%3B70000001093407644" target="_blank" rel="noopener">Построить маршрут</a>
+      </div>
+    </div>
+    <div class="mapart" aria-hidden="true">
+      <svg viewBox="0 0 500 420" preserveAspectRatio="xMidYMid slice">
+        <defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14594a"/><stop offset="1" stop-color="#0c3329"/></linearGradient></defs>
+        <rect width="500" height="420" fill="url(#mg)"/>
+        <g stroke="#f1d28f" stroke-opacity=".28" stroke-width="2" fill="none">
+          <path d="M0 120H500M0 250H500M0 340H500M110 0V420M260 0V420M390 0V420"/>
+          <path d="M0 400L500 40" stroke-opacity=".18"/>
+        </g>
+        <circle cx="260" cy="210" r="120" fill="#f2a33a" opacity=".12"/>
+        <circle cx="260" cy="210" r="70" fill="#f2a33a" opacity=".18"/>
+        <path d="M260 120c-34 0-58 24-58 56c0 40 58 100 58 100s58-60 58-100c0-32-24-56-58-56Z" fill="url(#goldG)"/>
+        <circle cx="260" cy="176" r="20" fill="#0c3329"/>
+        <use href="#lotus" x="230" y="170" width="60" height="36"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Iris Thai Spa · Астана · Данные из 2ГИС на 27.10.2026. Иллюстрации нарисованы для этой страницы.
+</footer>
+
+<div class="sticky">
+  <a class="btn btn-gold" href="https://wa.me/77084900144?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20Iris%20Thai%20Spa" target="_blank" rel="noopener">Записаться в WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var hero=document.getElementById("top");
+  for(var i=0;i<14;i++){
+    var p=document.createElement("i");
+    p.className="petal";
+    p.style.left=(Math.random()*100)+"%";
+    p.style.animationDuration=(9+Math.random()*9)+"s";
+    p.style.animationDelay=(-Math.random()*14)+"s";
+    p.style.transform="scale("+(.6+Math.random()*.9)+")";
+    hero.appendChild(p);
+  }
+})();
+</script>
+</body>
+</html>
